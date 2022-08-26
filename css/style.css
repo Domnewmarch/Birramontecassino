@@ -402,6 +402,7 @@ a:hover,
   -ms-flex-align: center;
   align-items: center;
   margin-top: 30px;
+  display: flex;
 }
 
 @media (min-width: 1025px) {
@@ -746,12 +747,18 @@ a:hover,
   position: relative;
 }
 
+.story__wrapper__history{
+  position: relative;
+  height: 100vh;
+}
+
 .story__main {
   text-align: center;
   font-family: 'salden-roman', sans, arial;
   font-size: 18px;
   line-height: 1.8;
   letter-spacing: 0.5px;
+  z-index: 5;
 }
 
 @media (min-width: 768px) {
@@ -847,11 +854,12 @@ a:hover,
   right: 0;
   width: 100%;
   overflow: hidden;
+  z-index: 1;
 }
 
 @media (min-width: 1025px) {
   .story__media-bg {
-    bottom: 30px;
+    bottom: 160px;
   }
 }
 
