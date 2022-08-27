@@ -804,6 +804,9 @@ a:hover,
   .story__main-col:last-child {
     text-align: right;
   }
+  .story__main-col p{
+    padding-bottom: 10px;
+  }
 }
 
 .story__main-col + .story__main-col {
