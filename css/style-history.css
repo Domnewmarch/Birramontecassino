@@ -688,6 +688,7 @@ a:hover,
   display: flex;
   justify-content: center;
   margin: auto;
+  z-index: 100;
 }
 
 .title--main .icon {
