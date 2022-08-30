@@ -684,6 +684,12 @@ a:hover,
   font-weight: normal;
 }
 
+.footer-img{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
 .title--main .icon {
   -ms-flex-negative: 0;
   flex-shrink: 0;
