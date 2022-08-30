@@ -794,6 +794,10 @@ a:hover,
   }
 }
 
+ .story__main-col p{
+    padding-bottom: 25px;
+  }
+
 @media (min-width: 1025px) {
   .story__main-col {
     width: 370px;
@@ -804,9 +808,7 @@ a:hover,
   .story__main-col:last-child {
     text-align: right;
   }
-  .story__main-col p{
-    padding-bottom: 10px;
-  }
+ 
 }
 
 .story__main-col + .story__main-col {
