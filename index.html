@@ -1,127 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="theme-color" content="#fff">
-	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-	<meta name="robots" content="index,follow">
-	<title>Birra Montecassino | Home</title>
-	<meta name="description" content="Birra Montecassino- a naturally carbonated Italian craft beer produced at the worlds oldest brewing abbey. Indulge into a 1500 year old story as you enjoy Birra Montecassino.">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="Birra Montecassino">
-	<meta property="og:site_name" content="Birra Montecassino">
-	<meta property="og:url" content="http://birramontecassino.it">
-	<meta property="og:description" content="Birra Montecassino- a naturally carbonated Italian craft beer produced at the worlds oldest brewing abbey. Indulge into a 1500 year old story as you enjoy Birra Montecassino.">
-	<meta property="og:image" content="http://birramontecassino.it/config/og/fb-image_1200x630.jpg">
-	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<link rel="stylesheet" href="css/print.min.css" media="print">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin-ext" rel="stylesheet" type="text/css">
-	<link rel="manifest" href="config/manifest/manifest.json">
-</head>
-<body>
-	<div class="site">
-		<img class="site__bg lazyload" data-src="images/bg.jpg" data-srcset="images/bg@2x.jpg 2x" alt="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="index,follow" />
+    <title>Birra Montecassino | Home</title>
+    <meta name="description" content="Birra Montecassino- a naturally carbonated Italian craft beer produced at the worlds oldest brewing abbey. Indulge into a 1500 year old story as you enjoy Birra Montecassino." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Birra Montecassino" />
+    <meta property="og:site_name" content="Birra Montecassino" />
+    <meta property="og:url" content="http://birramontecassino.it" />
+    <meta property="og:description" content="Birra Montecassino- a naturally carbonated Italian craft beer produced at the worlds oldest brewing abbey. Indulge into a 1500 year old story as you enjoy Birra Montecassino." />
+    <meta property="og:image" content="http://birramontecassino.it/config/og/fb-image_1200x630.jpg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/print.min.css" media="print" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin-ext" rel="stylesheet" type="text/css" />
+    <link rel="manifest" href="config/manifest/manifest.json" />
+  </head>
+  <body>
+    <div id="loading-screen">
+      <video id="loading-video" autoplay muted loop>
+        <source src="./images/birra-vid.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+      <div id="age-verification" class="age-verification-overlay">
+        <h2 style="color: white; margin-bottom: 10px">Please verify your age</h2>
+        <form id="age-verification-form" onsubmit="verifyAge(event)">
+          <input type="date" id="dob" required />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
 
-		<div class="site__in">
-			<nav class="nav animate">
-		<a href="/history.html" class="nav__item" aria-label="La storia Birra Montecassino"><span class="nav__item-title">History</span><div class="nav__item-subtitle">Birra Montecassino</div></a>
-		<a href="#birra" class="nav__item" aria-label="La storia Birra Montecassino"><span class="nav__item-title">Our Story</span><div class="nav__item-subtitle">Birra Montecassino</div></a>
-	</nav>
+    <div class="site">
+      <img class="site__bg lazyload" data-src="images/bg.jpg" data-srcset="images/bg@2x.jpg 2x" alt="" />
 
-	<section class="hero animate animate--delay01">
-		<picture class="hero__img">
-			<source media="(max-width: 767px)" srcset="images/new-logo.png, images/new-logo.png 2x">
-			<source media="(min-width: 768px)" srcset="images/new-logo.png, images/new-logo.png 2x">
-			<img class="lazyload" data-src="images/new-logo.png" alt="Montecassino" width="500px">
-		</picture>
+      <div class="site__in">
+        <nav class="nav animate">
+          <a href="/history.html" class="nav__item" aria-label="La storia Birra Montecassino"
+            ><span class="nav__item-title">History</span>
+            <div class="nav__item-subtitle">Birra Montecassino</div></a
+          >
+          <a href="#birra" class="nav__item" aria-label="La storia Birra Montecassino"
+            ><span class="nav__item-title">Our Story</span>
+            <div class="nav__item-subtitle">Birra Montecassino</div></a
+          >
+        </nav>
 
-		<div class="hero__btns">
-			<a href="/history.html" class="hero__btns-item" rel="noopener" aria-label="Maggiori informazioni"><span class="hero__btns-item-in">Our History</span></a>
-			<a href="https://birramontecassino.store/" class="hero__btns-item" rel="noopener" aria-label="Acquista ora"><span class="hero__btns-item-in">Buy Now</span></a>
-		</div>
+        <section class="hero animate animate--delay01">
+          <picture class="hero__img">
+            <source media="(max-width: 767px)" srcset="images/new-logo.png, images/new-logo.png 2x" />
+            <source media="(min-width: 768px)" srcset="images/new-logo.png, images/new-logo.png 2x" />
+            <img class="lazyload" data-src="images/new-logo.png" alt="Montecassino" width="500px" />
+          </picture>
 
-		<a class="hero__scrollbtn" aria-label="scroll down" href="#birra">scroll down</a>
-	</section>
+          <div class="hero__btns">
+            <a href="/history.html" class="hero__btns-item" rel="noopener" aria-label="Maggiori informazioni"><span class="hero__btns-item-in">Our History</span></a>
+            <a href="https://birramontecassino.store/" class="hero__btns-item" rel="noopener" aria-label="Acquista ora"><span class="hero__btns-item-in">Buy Now</span></a>
+          </div>
 
-	<section class="story" id="birra">
-		<header class="story__header animate">
-			<h1 class="title title--main"><svg class="icon icon--title-left"><use xlink:href="#icon--title:left"></use></svg><span>Our Story</span><svg class="icon icon--title-right"><use xlink:href="#icon--title:right"></use></svg></h1>		</header>
+          <a class="hero__scrollbtn" aria-label="scroll down" href="#birra">scroll down</a>
+        </section>
 
-		<div class="story__wrapper">
-			<div class="story__main animate">
-				<div class="container container--wide story__main-container">
-					<div class="story__main-col">
-						<p>Rediscovered in 2018 Birra MonteCassino truly has a unique history. First made famous over 1500 years ago,
-							MonteCassino
-							is the worlds oldest brewing abbey and was renowned for it's heavenly craft throughout Europe. Situated at the
-							peak of a
-							small mountain, overlooking the town of Cassino below, the abbey stood proud until the devasting WWII "Battle of
-							Montecassino" in 1944 which halted production and left the abbey in ruin. The Montecassino abbey was beautifully
-							restored in 1964, however the brewery was left irretrievable. But the story didn't end there.
-						</p>
-					</div>
-					
-					<div class="story__main-col">
-						<p>Almost 80 years after the battle, the resurrection of Birra MonteCassino began. Through refining techniques and
-							centuries old traditional brewing methods, whilst using the mountains natural water source, we have been able to
-							produce
-							a naturally carbonated ltalian craft beer with a distinctive and authentic flavour. Nestled in the hills of
-							Montecassino
-							within a state of the art brewery, we have revived the legacy.</p>
-					</div>
-				</div>
-			</div>
+        <section class="story" id="birra">
+          <header class="story__header animate">
+            <h1 class="title title--main">
+              <svg class="icon icon--title-left"><use xlink:href="#icon--title:left"></use></svg><span>Our Story</span><svg class="icon icon--title-right"><use xlink:href="#icon--title:right"></use></svg>
+            </h1>
+          </header>
 
-			<div class="story__media">
-				<div class="story__media-clouds">
-					<div class="story__media-cloud">
-						<img class="flycloud" src="images/cloud.png" srcset="images/cloud@2x.png 2x" alt="">
-					</div>
-					<div class="story__media-cloud hide--mobile">
-						<img class="flycloud flycloud--delay1" src="images/cloud.png" srcset="images/cloud@2x.png 2x" alt="">
-					</div>
-					<div class="story__media-cloud hide--mobile">
-						<img class="flycloud flycloud--delay2" src="images/cloud.png" srcset="images/cloud@2x.png 2x" alt="">
-					</div>
-				</div>
+          <div class="story__wrapper">
+            <div class="story__main animate">
+              <div class="container container--wide story__main-container">
+                <div class="story__main-col">
+                  <p>Rediscovered in 2018 Birra MonteCassino truly has a unique history. First made famous over 1500 years ago, MonteCassino is the worlds oldest brewing abbey and was renowned for it's heavenly craft throughout Europe. Situated at the peak of a small mountain, overlooking the town of Cassino below, the abbey stood proud until the devasting WWII "Battle of Montecassino" in 1944 which halted production and left the abbey in ruin. The Montecassino abbey was beautifully restored in 1964, however the brewery was left irretrievable. But the story didn't end there.</p>
+                </div>
 
-				<picture class="story__media-img animate animate--fall">
-					<img class="lazyload" data-src="images/beer-desktop-new.png" alt="la birra" height="600px">
-				</picture>
+                <div class="story__main-col">
+                  <p>Almost 80 years after the battle, the resurrection of Birra MonteCassino began. Through refining techniques and centuries old traditional brewing methods, whilst using the mountains natural water source, we have been able to produce a naturally carbonated ltalian craft beer with a distinctive and authentic flavour. Nestled in the hills of Montecassino within a state of the art brewery, we have revived the legacy.</p>
+                </div>
+              </div>
+            </div>
 
-				<div class="story__media-bg" style="margin-bottom:-50px;">
-					<img style="margin-bottom:80px;" data-src="images/city.png" data-srcset="images/city@2x.png 2x" alt="" class="story__media-bg-img lazyload">
-				</div>
-			</div>
-		</div>
-	</section>
+            <div class="story__media">
+              <div class="story__media-clouds">
+                <div class="story__media-cloud">
+                  <img class="flycloud" src="images/cloud.png" srcset="images/cloud@2x.png 2x" alt="" />
+                </div>
+                <div class="story__media-cloud hide--mobile">
+                  <img class="flycloud flycloud--delay1" src="images/cloud.png" srcset="images/cloud@2x.png 2x" alt="" />
+                </div>
+                <div class="story__media-cloud hide--mobile">
+                  <img class="flycloud flycloud--delay2" src="images/cloud.png" srcset="images/cloud@2x.png 2x" alt="" />
+                </div>
+              </div>
 
-	<div class="ground">
-		<img data-src="images/shadow.jpg" data-srcset="images/shadow@2x.jpg 2x" alt="" class="ground__bg lazyload">
+              <picture class="story__media-img animate animate--fall">
+                <img class="lazyload" data-src="images/beer-desktop-new.png" alt="la birra" height="600px" />
+              </picture>
 
-		<div class="container">
-			<p class="ground__claim flycloud">Birra Montecassino has been reborn</p>
-		</div>
-	</div>
+              <div class="story__media-bg" style="margin-bottom: -50px">
+                <img style="margin-bottom: 80px" data-src="images/city.png" data-srcset="images/city@2x.png 2x" alt="" class="story__media-bg-img lazyload" />
+              </div>
+            </div>
+          </div>
+        </section>
 
-	<footer class="footer" id="footer">
-		<div class="container footer__container">
-			<div class="footer__text">
-				<p>Copyright © 2021 Albaneta Tenuta di Montecassino
-					<br><a href="https://www.albaneta.com/privacy-policy/" target="_blank" rel="noopener">Privacy policy</a></p>
-			</div>
+        <div class="ground">
+          <img data-src="images/shadow.jpg" data-srcset="images/shadow@2x.jpg 2x" alt="" class="ground__bg lazyload" />
 
-			
-		</div>
-	</footer>
+          <div class="container">
+            <p class="ground__claim flycloud">Birra Montecassino has been reborn</p>
+          </div>
+        </div>
 
-		</div>
-	</div>
+        <footer class="footer" id="footer">
+          <div class="container footer__container">
+            <div class="footer__text">
+              <p>Copyright © 2021 Albaneta Tenuta di Montecassino <br /><a href="https://www.albaneta.com/privacy-policy/" target="_blank" rel="noopener">Privacy policy</a></p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
 
-	<script src="js/scripts.min.js" defer></script>
-</body>
+    <script src="js/scripts.min.js" defer></script>
+    <script>
+      function showAgeVerification() {
+        document.getElementById("loading-video").style.display = "none";
+        document.getElementById("age-verification").style.display = "block";
+      }
+
+      function verifyAge(event) {
+        event.preventDefault();
+        var dob = document.getElementById("dob").value;
+        var dobDate = new Date(dob);
+        var now = new Date();
+
+        var age = now.getFullYear() - dobDate.getFullYear();
+        var m = now.getMonth() - dobDate.getMonth();
+        if (m < 0 || (m === 0 && now.getDate() < dobDate.getDate())) {
+          age--;
+        }
+
+        if (age >= 18) {
+          // Adjust this value to whatever age you want to restrict
+          document.getElementById("loading-screen").style.display = "none";
+        } else {
+          alert("Sorry, you are not old enough to visit this site.");
+        }
+      }
+    </script>
+  </body>
 </html>
