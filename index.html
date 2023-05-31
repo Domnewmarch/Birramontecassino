@@ -29,10 +29,12 @@
         Your browser does not support HTML5 video.
       </video>
       <div id="age-verification" class="age-verification-overlay">
-        <h2 style="color: white; margin-bottom: 10px">Please verify your age</h2>
         <form id="age-verification-form" onsubmit="verifyAge(event)">
-          <input type="date" id="dob" required />
-          <button type="submit">Submit</button>
+          <div>
+            <input type="checkbox" id="over18" required />
+            <label for="over18" style="color: white">I confirm I am over the age of 18</label>
+          </div>
+          <button style="padding: 5px; margin-top: 10px" type="submit">Enter</button>
         </form>
       </div>
     </div>
@@ -131,30 +133,49 @@
 
     <script src="js/scripts.min.js" defer></script>
     <script>
-      function showAgeVerification() {
-        document.getElementById("loading-video").style.display = "none";
-        document.getElementById("age-verification").style.display = "block";
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+          expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      }
+
+      function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(";");
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == " ") c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
       }
 
       function verifyAge(event) {
         event.preventDefault();
-        var dob = document.getElementById("dob").value;
-        var dobDate = new Date(dob);
-        var now = new Date();
+        var over18 = document.getElementById("over18").checked;
 
-        var age = now.getFullYear() - dobDate.getFullYear();
-        var m = now.getMonth() - dobDate.getMonth();
-        if (m < 0 || (m === 0 && now.getDate() < dobDate.getDate())) {
-          age--;
-        }
-
-        if (age >= 18) {
-          // Adjust this value to whatever age you want to restrict
+        if (over18) {
           document.getElementById("loading-screen").style.display = "none";
+          setCookie("ageVerified", "true", 30);
         } else {
-          alert("Sorry, you are not old enough to visit this site.");
+          alert("Sorry, you need to confirm that you are over the age of 18.");
         }
       }
+
+      window.onload = function () {
+        if (!getCookie("ageVerified")) {
+          // Show the age verification form
+          document.getElementById("age-verification").style.display = "block";
+        } else {
+          // Age already verified, hide everything
+          document.getElementById("loading-screen").style.display = "none";
+          document.getElementById("age-verification").style.display = "none";
+        }
+      };
     </script>
   </body>
 </html>
