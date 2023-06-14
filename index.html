@@ -28,7 +28,10 @@
         <source src="./images/birra-vid.mp4" type="video/mp4" />
         Your browser does not support HTML5 video.
       </video>
-      <img id="loading-image" src="./images/birra-img.jpeg" class="mobile-hide" alt="Loading Screen" />
+      <video id="loading-image" autoplay muted loop playsinline class="mobile-hide">
+        <source src="./images/birra-desktop.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
       <div id="age-verification" class="age-verification-overlay">
         <form id="age-verification-form" onsubmit="verifyAge(event)">
           <div>
