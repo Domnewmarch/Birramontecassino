@@ -3,26 +3,26 @@
 /* REM calc */
 /* Variables */
 @font-face {
-  font-family: "salden-caps";
+  font-family: 'salden-caps';
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/salden-caps.woff2") format("woff2"), url("../fonts/salden-caps.woff") format("woff");
+  src: url('../fonts/salden-caps.woff2') format('woff2'), url('../fonts/salden-caps.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: "salden-roman";
+  font-family: 'salden-roman';
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/salden-roman.woff2") format("woff2"), url("../fonts/salden-roman.woff") format("woff");
+  src: url('../fonts/salden-roman.woff2') format('woff2'), url('../fonts/salden-roman.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: "sofia-pro-regular";
+  font-family: 'sofia-pro-regular';
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/sofia-pro-regular.woff2") format("woff2"), url("../fonts/sofia-pro-regular.woff") format("woff");
+  src: url('../fonts/sofia-pro-regular.woff2') format('woff2'), url('../fonts/sofia-pro-regular.woff') format('woff');
   font-display: swap;
 }
 
@@ -83,7 +83,7 @@
 }
 
 html {
-  font-family: "salden-roman", sans, arial;
+  font-family: 'salden-roman', sans, arial;
   font-size: 16px;
   line-height: 1.4;
   color: #4a3024;
@@ -171,7 +171,7 @@ button {
   border-radius: 0;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -196,14 +196,14 @@ textarea {
   border: 0px;
 }
 
-a[href^="tel"],
-a[href^="sms"] {
+a[href^='tel'],
+a[href^='sms'] {
   text-decoration: none;
   cursor: default;
 }
 
-a[href^="tel"]:before,
-a[href^="sms"]:before {
+a[href^='tel']:before,
+a[href^='sms']:before {
   display: none;
 }
 
@@ -348,7 +348,7 @@ a:hover,
 }
 
 .footer__text {
-  font-family: "sofia-pro-regular", sans, arial;
+  font-family: 'sofia-pro-regular', sans, arial;
   font-size: 12px;
   letter-spacing: 0.3px;
   margin-bottom: 30px;
@@ -392,7 +392,7 @@ a:hover,
   text-transform: uppercase;
   font-size: 29px;
   letter-spacing: 1px;
-  font-family: "salden-caps", sans, arial;
+  font-family: 'salden-caps', sans, arial;
 }
 
 @media (min-width: 768px) {
@@ -463,7 +463,7 @@ a:hover,
 
 .nav__item {
   text-align: center;
-  font-family: "salden-caps", sans, arial;
+  font-family: 'salden-caps', sans, arial;
   height: 26px;
   color: #4a3024;
   text-transform: uppercase;
@@ -476,7 +476,7 @@ a:hover,
 
 .nav__item-subtitle {
   text-transform: none;
-  font-family: "salden-roman", sans, arial;
+  font-family: 'salden-roman', sans, arial;
   font-size: 14px;
 }
 
@@ -597,7 +597,7 @@ a:hover,
   border-radius: 4px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: "salden-caps", sans, arial;
+  font-family: 'salden-caps', sans, arial;
   z-index: 5;
   -webkit-transition: 0.3s ease background, 0.3s ease color;
   -o-transition: 0.3s ease background, 0.3s ease color;
@@ -605,7 +605,7 @@ a:hover,
 }
 
 .hero__btns-item:after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
@@ -657,7 +657,7 @@ a:hover,
 
 .hero__scrollbtn {
   display: inline-block;
-  font-family: "salden-caps", sans, arial;
+  font-family: 'salden-caps', sans, arial;
   background: none;
   text-decoration: none;
   text-transform: uppercase;
@@ -669,7 +669,7 @@ a:hover,
 
 .hero__scrollbtn:before,
 .hero__scrollbtn:after {
-  content: "";
+  content: '';
   width: 2px;
   height: 20px;
   background-color: currentColor;
@@ -724,7 +724,7 @@ a:hover,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: "salden-caps", sans, arial;
+  font-family: 'salden-caps', sans, arial;
   font-size: 36px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -800,9 +800,14 @@ a:hover,
   height: 100vh;
 }
 
+.story__wrapper__events {
+  position: relative;
+  height: 50vh;
+}
+
 .story__main {
   text-align: center;
-  font-family: "salden-roman", sans, arial;
+  font-family: 'salden-roman', sans, arial;
   font-size: 18px;
   line-height: 1.8;
   letter-spacing: 0.5px;
@@ -914,7 +919,7 @@ a:hover,
 @media (min-width: 1921px) {
   .story__media-bg:before,
   .story__media-bg:after {
-    content: "";
+    content: '';
     position: absolute;
     z-index: 5;
     bottom: 70px;
@@ -1087,7 +1092,7 @@ a:hover,
 }
 
 .ground__claim {
-  font-family: "salden-caps", sans, arial;
+  font-family: 'salden-caps', sans, arial;
   text-align: center;
   font-size: 26px;
   margin-bottom: 60px;
