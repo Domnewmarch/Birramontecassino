@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Specify the recipient email address
     $to = "dom@envydigital.co.uk"; // CHANGE THIS to your actual email address
-    $subject = "Event Inquiry from $name";
+    $subject = "Event enquiries from $name";
     $body = "Name: $name\n";
     $body .= "Email: $email\n";
     $body .= "Event Type: $eventType\n\n";
